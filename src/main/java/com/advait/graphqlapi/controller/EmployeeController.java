@@ -14,6 +14,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 public class EmployeeController {
@@ -23,12 +24,17 @@ public class EmployeeController {
 
     @QueryMapping
     public Flux<Employee> listEmployees(@Argument Integer page, @Argument Integer size) {
-        return Flux.fromIterable(new ArrayList<Employee>());
+        return Flux.fromIterable(employeeRepository.findAll());
     }
 
     @MutationMapping
     public Mono<Employee> addEmployee(@Argument EmployeeInfo employeeInfo) {
-        Employee employee = new Employee(null, employeeInfo.getName(), employeeInfo.getAddressLine1(), employeeInfo.getAddressLine2(), employeeInfo.getContact(), employeeInfo.getDepartment(), employeeInfo.getSalary(), false);
-        return Mono.just(employeeRepository.save(employee));
+        return Mono.just(employeeRepository.save(Employee.builder()
+                .name(employeeInfo.getName())
+                .addressLine1(employeeInfo.getAddressLine1())
+                .addressLine2(employeeInfo.getAddressLine2())
+                .contact(employeeInfo.getContact())
+                .department(employeeInfo.getDepartment())
+                .salary(employeeInfo.getSalary()).build()));
     }
 }
