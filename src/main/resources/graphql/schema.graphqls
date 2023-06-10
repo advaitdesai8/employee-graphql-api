@@ -3,7 +3,16 @@ type Query{
 }
 
 type Mutation{
-    addEmployee(exEmployee: Boolean): [Employee]
+    addEmployee(employeeInfo: EmployeeInfo): [Employee]
+}
+
+input EmployeeInfo {
+    name: String!
+    addressLine1: String!
+    addressLine2: String
+    contact: String
+    department: String!
+    salary: Int
 }
 
 type Employee {
