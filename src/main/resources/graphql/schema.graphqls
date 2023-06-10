@@ -3,7 +3,7 @@ type Query{
 }
 
 type Mutation{
-    addEmployee(employeeInfo: EmployeeInfo): [Employee]
+    addEmployee(employeeInfo: EmployeeInfo): Employee
 }
 
 input EmployeeInfo {
