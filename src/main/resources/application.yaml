@@ -1,0 +1,16 @@
+server:
+  port: 8081
+
+logging:
+  level:
+    root: INFO
+
+
+spring:
+  jpa:
+    database-platform: org.hibernate.dialect.Oracle10gDialect
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521/xe
+    username: LOCAL_DB
+    password: admin
+    driver-class-name: oracle.jdbc.OracleDriver
