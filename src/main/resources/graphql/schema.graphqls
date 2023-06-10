@@ -1,0 +1,17 @@
+type Query{
+    listEmployees(page: Int, size: Int): [Employee]
+}
+
+type Mutation{
+    addEmployee(exEmployee: Boolean): [Employee]
+}
+
+type Employee {
+    employeeId: Int!
+    name: String!
+    addressLine1: String!
+    addressLine2: String
+    contact: String
+    department: String!
+    salary: Int
+}
