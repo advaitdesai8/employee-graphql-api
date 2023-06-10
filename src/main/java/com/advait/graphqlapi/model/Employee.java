@@ -1,5 +1,6 @@
 package com.advait.graphqlapi.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import javax.persistence.Column;
@@ -10,6 +11,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "employee")
 @Data
+@AllArgsConstructor
 public class Employee {
 
     @Id
