@@ -1,18 +1,27 @@
-package com.advait.graphqlapi.model;
+package com.advait.graphqlapi.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+
+/**
+ This is a entity class for Employee table
+ */
 
 @Entity
 @Table(name = "employee")
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class Employee {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "empSeqGen")
+    @SequenceGenerator(name = "empSeqGen", sequenceName = "EMPLOYEE_ID_SEQ", allocationSize = 1)
     @Column(name = "Employee_Id")
     private Integer employeeId;
 
