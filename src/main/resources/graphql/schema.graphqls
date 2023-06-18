@@ -4,9 +4,12 @@ type Query{
 
 type Mutation{
     addEmployee(employeeInfo: EmployeeInfo): Employee
+    updateEmployee(employeeInfo: EmployeeInfo): Employee
+    removeEmployee(employeeId: String): String
 }
 
 input EmployeeInfo {
+    employeeId: Int
     name: String!
     addressLine1: String!
     addressLine2: String

@@ -1,19 +1,11 @@
 package com.advait.graphqlapi.model;
 
-import lombok.Data;
+import com.advait.graphqlapi.entity.Employee;
 
-@Data
-public class EmployeeInfo {
+/**
+This class is used as Input for GraphQL queries/mutations
+ */
 
-    private String name;
+public class EmployeeInfo extends Employee {
 
-    private String addressLine1;
-
-    private String addressLine2;
-
-    private String contact;
-
-    private String department;
-
-    private Integer salary;
 }

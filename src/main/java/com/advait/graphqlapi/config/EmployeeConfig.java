@@ -12,8 +12,7 @@ public class EmployeeConfig {
 
     @Bean
     public SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http) {
-        http
-                .csrf(ServerHttpSecurity.CsrfSpec::disable);
+        http.csrf(ServerHttpSecurity.CsrfSpec::disable);
         return http.build();
     }
 }

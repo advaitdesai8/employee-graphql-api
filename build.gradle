@@ -6,7 +6,7 @@ plugins {
 
 group = 'com.advait'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '8'
+sourceCompatibility = '11'
 
 repositories {
 	mavenCentral()
@@ -19,9 +19,6 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
 	implementation 'org.projectlombok:lombok:1.18.22'
 	annotationProcessor 'org.projectlombok:lombok:1.18.22'
-	implementation group: 'org.slf4j', name: 'slf4j-api', version: '2.0.3'
-	implementation 'org.slf4j:slf4j-simple:2.0.3'
-	runtimeOnly 'com.mysql:mysql-connector-j'
 	runtimeOnly 'com.oracle.database.jdbc:ojdbc8'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'io.projectreactor:reactor-test'
