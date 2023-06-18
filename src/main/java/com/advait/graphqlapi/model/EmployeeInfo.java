@@ -7,4 +7,5 @@ This class is used as Input for GraphQL queries/mutations
  */
 
 public class EmployeeInfo extends Employee {
+
 }

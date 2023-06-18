@@ -1,10 +1,10 @@
 package com.advait.graphqlapi.controller;
 
 import com.advait.graphqlapi.entity.Employee;
-import com.advait.graphqlapi.model.EmployeeInfo;
 import com.advait.graphqlapi.repo.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
+
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.MutationMapping;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
